@@ -1,11 +1,14 @@
 "use client";
+
 import { ChevronRightIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { clsx } from "clsx";
 
 const Header = () => {
+  // improve hover handling and create some animations
+
   const [hiddenMenu, setHiddenMenu] = useState(false);
 
   const headerLogoHoveredClasses = useMemo(
@@ -37,6 +40,10 @@ const Header = () => {
       }),
     [hiddenMenu],
   );
+
+  useEffect(() => {
+    setHiddenMenu(false);
+  }, [])
 
   const headerEnterHandler = () => {
     setHiddenMenu(false);

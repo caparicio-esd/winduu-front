@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={"winduu"}>
         <div className="winduu_front min-h-screen flex flex-col">
           <Header />
-          <div className="wrapper flex-1 mt-16">{children}</div>
+          <div className="wrapper block flex-1 mt-16">{children}</div>
           <Footer />
         </div>
       </body>

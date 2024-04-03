@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React, {
   FC,
   ForwardRefExoticComponent,
@@ -5,6 +6,8 @@ import React, {
   RefAttributes,
   SVGProps,
 } from "react";
+import { Button, buttonVariants } from "../ui/button";
+import Image from "next/image";
 
 type IconAlias = ForwardRefExoticComponent<
   Omit<SVGProps<SVGSVGElement>, "ref"> & {
@@ -12,6 +15,15 @@ type IconAlias = ForwardRefExoticComponent<
     titleId?: string | undefined;
   } & RefAttributes<SVGSVGElement>
 >;
+type ButtonVariantProps =
+  | "link"
+  | "ghost"
+  | "default"
+  | "destructive"
+  | "outline"
+  | "secondary"
+  | null
+  | undefined;
 
 type CardType = {
   layout?:
@@ -25,25 +37,68 @@ type CardType = {
   title?: string;
   text?: string;
   buttons?: { text: string; icon: IconAlias; primary: boolean }[];
+  picture?: string | "none";
+  className?: string;
 };
 
 const Card: FC<CardType> = (props) => {
+  const isLayoutDefined = props.layout !== undefined;
+  const cardContentStyleClasses = clsx(
+    "card_content flex flex-col gap-2 p-8 container mx-auto",
+    "col-start-1 col-end-2 row-start-1 row-end-2",
+    {
+      "self-start":
+        isLayoutDefined && ["top-left", "top-center"].includes(props.layout!),
+      "self-center":
+        isLayoutDefined &&
+        ["center-left", "center-center"].includes(props.layout!),
+      "self-end":
+        isLayoutDefined &&
+        ["bottom-left", "bottom-center"].includes(props.layout!),
+    }
+  );
+
   return (
-    <div className="bg-gray-200 p-8">
-      {props.title && <h2>{props.title}</h2>}
-      {props.text && <p>{props.text}</p>}
-      {props.buttons && props.buttons?.length > 0 && (
-        <div className="buttons">
-          {props.buttons?.map((button, i) => (
-            <button key={i} className="inline-flex gap-2 items-center">
-              <div className="label">{button.text}</div>
-              <div className="icon">
-                <button.icon className="h-4" />
-              </div>
-            </button>
-          ))}
-        </div>
-      )}
+    <div className={"card bg-gray-100 grid " + props.className}>
+      <picture className="card_picture col-start-1 col-end-2 row-start-1 row-end-2">
+        {props.picture && props.picture !== "none" && (
+          // TODO improve picture sizing
+          <Image
+            src={props.picture}
+            alt={props.title || ""}
+            className="w-full h-full object-cover"
+          />
+        )}
+        {props.picture === undefined && (
+          <Image
+            src="/img_placeholder.svg"
+            alt="img_placeholder"
+            className="w-full h-full object-center object-scale-down"
+            height={100}
+            width={100}
+          />
+        )}
+      </picture>
+      <div className={cardContentStyleClasses}>
+        {props.title && <h2 className="text-xl max-w-[20ch]">{props.title}</h2>}
+        {props.text && <p className="max-w-[35ch] mb-2">{props.text}</p>}
+        {props.buttons && props.buttons?.length > 0 && (
+          <div className="buttons flex gap-2">
+            {props.buttons?.map((button, i) => (
+              <Button
+                key={i}
+                className="inline-flex gap-2 items-center"
+                variant={(!button.primary ? "ghost" : "") as ButtonVariantProps}
+              >
+                <div className="label">{button.text}</div>
+                <div className="icon">
+                  <button.icon className="h-4" />
+                </div>
+              </Button>
+            ))}
+          </div>
+        )}
+      </div>
     </div>
   );
 };

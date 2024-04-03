@@ -12,15 +12,17 @@ const CardContainer: FC<CardContainerPropsType> = (props) => {
   const hasScreenHeight = props.screenHeight !== undefined;
   const isLayoutFluid = props.adaptativity == "fluid";
   const isLayoutFramed = props.adaptativity == "framed";
+  const isLayoutDynamic = props.adaptativity == "dynamic";
 
   const cardContainerPropsClasses = clsx("grid gap-4", {
     "w-full": isLayoutFluid,
     [`w-[calc(100%_-_4rem)]`]: isLayoutFramed,
-    "mx-auto": isLayoutFramed,
+    "container": isLayoutDynamic,
+    "mx-auto": isLayoutFramed || isLayoutDynamic,
   });
   const cardContainerPropsStyles = {
-    gridTemplateColumns: `repeat(${props.cols}, 1fr)`,
-    height: hasScreenHeight ? `${props.screenHeight}vh` : "",
+    gridTemplateColumns: props.cols && props.cols > 1 ? `repeat(${props.cols}, 1fr)` : "1fr",
+    minHeight: hasScreenHeight ? `${props.screenHeight}vh` : "",
   };
 
   return (
