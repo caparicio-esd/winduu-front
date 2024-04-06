@@ -28,7 +28,7 @@ const Home = () => {
           {/* TODO refactor in props */}
           <h2 className="text-3xl max-w-[20ch]">Asómate a un mundo</h2>
           <p className="max-w-[35ch] mb-2 mt-4">
-            De altísima calidad de serie,  permiten incorporar opciones premium
+            De altísima calidad de serie, permiten incorporar opciones premium
             opcionales:
           </p>
         </SectionHeading>
@@ -36,7 +36,7 @@ const Home = () => {
           className="min-h-96"
           picture="none"
           title="Sostenible"
-          text="Estándares máximos de eficiencia térmica, equivalentes sólo a las ventanas de madera. Con la belleza, la estabilidad y duración que sólo pueden ofrecerle  las ventanas de aluminio."
+          text="Estándares máximos de eficiencia térmica, equivalentes sólo a las ventanas de madera. Con la belleza, la estabilidad y duración que sólo pueden ofrecerle las ventanas de aluminio."
         ></Card>
         <Card
           className="min-h-96"
@@ -69,7 +69,7 @@ const Home = () => {
           {/* TODO refactor in props */}
           <h2 className="text-3xl max-w-[20ch]">Nuestras gamas</h2>
           <p className="max-w-[35ch] mb-2 mt-4">
-            De altísima calidad de serie,  permiten incorporar opciones premium
+            De altísima calidad de serie, permiten incorporar opciones premium
             opcionales:
           </p>
         </SectionHeading>
@@ -87,7 +87,7 @@ const Home = () => {
         ></CardIcon>
         <CardIcon
           title="Secure"
-          text="Máximo aislamiento acústico. Incorpora láminas y vidrios de alta protección acústica. "
+          text="Máximo aislamiento acústico. Incorpora láminas y vidrios de alta protección acústica."
           link={{ title: "Saber más", href: "asdasdas" }}
           icon={PlusCircleIcon}
         ></CardIcon>
@@ -97,7 +97,7 @@ const Home = () => {
         <Card
           layout="top-left"
           title="La sostenibilidad y la eficiencia energética como eje de diferenciación"
-          text="Más allá de su atractivo diseño o de su alta funcionalidad y resistencia, nuestras ventanas de aluminio 100%, son perfectamente reciclables, lo que contribuye a reducir las emisiones de dióxido de carbono. "
+          text="Más allá de su atractivo diseño o de su alta funcionalidad y resistencia, nuestras ventanas de aluminio 100%, son perfectamente reciclables, lo que contribuye a reducir las emisiones de dióxido de carbono."
           buttons={[
             { text: "Descubrir", icon: ChevronRightIcon, primary: true },
             { text: "Servicios", icon: ChevronRightIcon, primary: false },
@@ -109,7 +109,7 @@ const Home = () => {
         <Card
           layout="top-left"
           title="Wisita nuestras tiendas Winduu"
-          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y  sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen. "
+          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen."
           buttons={[
             {
               text: "Descubrir tiendas",
@@ -125,21 +125,21 @@ const Home = () => {
           preIcon={ChartBarIcon}
           layout="top-left"
           title="Wisita nuestras tiendas Winduu"
-          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y  sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen. "
+          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen."
           picture="none"
         ></Card>
         <Card
           preIcon={ChartBarIcon}
           layout="top-left"
           title="Wisita nuestras tiendas Winduu"
-          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y  sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen. "
+          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen."
           picture="none"
         ></Card>
         <Card
           className="row-span-3"
           layout="top-left"
           title="Wisita nuestras tiendas Winduu"
-          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y  sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen. "
+          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen."
           picture="none"
           buttons={[
             {
@@ -153,28 +153,28 @@ const Home = () => {
           preIcon={ChartBarIcon}
           layout="top-left"
           title="Wisita nuestras tiendas Winduu"
-          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y  sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen. "
+          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen."
           picture="none"
         ></Card>
         <Card
           preIcon={ChartBarIcon}
           layout="top-left"
           title="Wisita nuestras tiendas Winduu"
-          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y  sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen. "
+          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen."
           picture="none"
         ></Card>
         <Card
           preIcon={ChartBarIcon}
           layout="top-left"
           title="Wisita nuestras tiendas Winduu"
-          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y  sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen. "
+          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen."
           picture="none"
         ></Card>
         <Card
           preIcon={ChartBarIcon}
           layout="top-left"
           title="Wisita nuestras tiendas Winduu"
-          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y  sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen. "
+          text="Nuestras tiendas exposición, son espacios pensados comunicar, experimentar y sentir cada detalle de nuestros productos Winduu. Productos que se exhiben con elegancia, mostrando todo el potencial que ofrecen."
           picture="none"
         ></Card>
       </CardContainer>
