@@ -43,7 +43,7 @@ const Header = () => {
 
   useEffect(() => {
     setHiddenMenu(false);
-  }, [])
+  }, []);
 
   const headerEnterHandler = () => {
     setHiddenMenu(false);

@@ -56,7 +56,7 @@ const Card: FC<CardType> = (props) => {
       "self-end":
         isLayoutDefined &&
         ["bottom-left", "bottom-center"].includes(props.layout!),
-    }
+    },
   );
 
   return (

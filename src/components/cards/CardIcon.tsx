@@ -28,11 +28,11 @@ type CardIconType = {
 const CardIcon: FC<CardIconType> = (props) => {
   const cardIconHeaderStyleClasses = clsx(
     "card_icon_header flex justify-between items-center gap-2 px-8 py-12 container mx-auto bg-gray-100",
-    "col-start-1 col-end-2 row-start-1 row-end-2"
+    "col-start-1 col-end-2 row-start-1 row-end-2",
   );
   const cardIconContentStyleClasses = clsx(
     "card_icon_content flex flex-col gap-2 px-8 py-8 container mx-auto",
-    "col-start-1 col-end-2 row-start-2 row-end-3"
+    "col-start-1 col-end-2 row-start-2 row-end-3",
   );
 
   return (

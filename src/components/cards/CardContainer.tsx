@@ -17,16 +17,20 @@ const CardContainer: FC<CardContainerPropsType> = (props) => {
   const cardContainerPropsClasses = clsx("grid gap-4", {
     "w-full": isLayoutFluid,
     [`w-[calc(100%_-_4rem)]`]: isLayoutFramed,
-    "container": isLayoutDynamic,
+    container: isLayoutDynamic,
     "mx-auto": isLayoutFramed || isLayoutDynamic,
   });
   const cardContainerPropsStyles = {
-    gridTemplateColumns: props.cols && props.cols > 1 ? `repeat(${props.cols}, 1fr)` : "1fr",
+    gridTemplateColumns:
+      props.cols && props.cols > 1 ? `repeat(${props.cols}, 1fr)` : "1fr",
     minHeight: hasScreenHeight ? `${props.screenHeight}vh` : "",
   };
 
   return (
-    <section className={cardContainerPropsClasses} style={cardContainerPropsStyles}>
+    <section
+      className={cardContainerPropsClasses}
+      style={cardContainerPropsStyles}
+    >
       {props.children}
     </section>
   );

@@ -15,11 +15,13 @@ const SectionHeading: FC<SectionHeadingPropsType> = (props) => {
   const sectionHeadingPropsClasses = clsx("grid gap-4 col-span-full p-0", {
     "w-full": isLayoutFluid,
     "[`w-[calc(100%_-_4rem)]`]": isLayoutFramed,
-    "container": isLayoutDynamic,
+    container: isLayoutDynamic,
     "mx-auto": isLayoutFramed || isLayoutDynamic,
   });
 
-  return <header className={sectionHeadingPropsClasses}>{props.children}</header>;
+  return (
+    <header className={sectionHeadingPropsClasses}>{props.children}</header>
+  );
 };
 
 export default SectionHeading;

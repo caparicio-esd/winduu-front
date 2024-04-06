@@ -72,7 +72,9 @@ const Footer = () => {
                 Social
               </div>
               <div className="menu_section_body flex flex-col gap-1">
-                <div className="menu_item"><Link href="/contact">Contacto</Link></div>
+                <div className="menu_item">
+                  <Link href="/contact">Contacto</Link>
+                </div>
                 <div className="menu_item">Instagram</div>
                 <div className="menu_item">Twitter</div>
                 <div className="menu_item">Facebook</div>
