@@ -12,7 +12,7 @@ const SectionHeading: FC<SectionHeadingPropsType> = (props) => {
   const isLayoutFramed = props.adaptativity == "framed";
   const isLayoutDynamic = props.adaptativity == "dynamic";
 
-  const sectionHeadingPropsClasses = clsx("grid gap-4", {
+  const sectionHeadingPropsClasses = clsx("grid gap-4 col-span-full p-0", {
     "w-full": isLayoutFluid,
     "[`w-[calc(100%_-_4rem)]`]": isLayoutFramed,
     "container": isLayoutDynamic,

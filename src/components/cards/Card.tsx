@@ -33,7 +33,8 @@ type CardType = {
     | "center-center"
     | "bottom-left"
     | "bottom-center";
-  icon?: ReactNode;
+  preIcon?: IconAlias | string;
+  lastIcon?: IconAlias;
   title?: string;
   text?: string;
   buttons?: { text: string; icon: IconAlias; primary: boolean }[];
@@ -44,7 +45,7 @@ type CardType = {
 const Card: FC<CardType> = (props) => {
   const isLayoutDefined = props.layout !== undefined;
   const cardContentStyleClasses = clsx(
-    "card_content flex flex-col gap-2 p-8 container mx-auto",
+    "card_content flex flex-col gap-2 px-8 py-16 container mx-auto items-start relative",
     "col-start-1 col-end-2 row-start-1 row-end-2",
     {
       "self-start":
@@ -59,7 +60,7 @@ const Card: FC<CardType> = (props) => {
   );
 
   return (
-    <div className={"card bg-gray-100 grid " + props.className}>
+    <article className={"card bg-gray-100 grid " + props.className}>
       <picture className="card_picture col-start-1 col-end-2 row-start-1 row-end-2">
         {props.picture && props.picture !== "none" && (
           // TODO improve picture sizing
@@ -80,6 +81,7 @@ const Card: FC<CardType> = (props) => {
         )}
       </picture>
       <div className={cardContentStyleClasses}>
+        {props.preIcon && <props.preIcon className="w-6" />}
         {props.title && <h2 className="text-xl max-w-[20ch]">{props.title}</h2>}
         {props.text && <p className="max-w-[35ch] mb-2">{props.text}</p>}
         {props.buttons && props.buttons?.length > 0 && (
@@ -98,8 +100,13 @@ const Card: FC<CardType> = (props) => {
             ))}
           </div>
         )}
+        {props.lastIcon && (
+          <Button variant="ghost" className="absolute right-4 bottom-8">
+            <props.lastIcon className="w-6" />
+          </Button>
+        )}
       </div>
-    </div>
+    </article>
   );
 };
 

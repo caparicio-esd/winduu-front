@@ -26,9 +26,9 @@ const CardContainer: FC<CardContainerPropsType> = (props) => {
   };
 
   return (
-    <div className={cardContainerPropsClasses} style={cardContainerPropsStyles}>
+    <section className={cardContainerPropsClasses} style={cardContainerPropsStyles}>
       {props.children}
-    </div>
+    </section>
   );
 };
 
