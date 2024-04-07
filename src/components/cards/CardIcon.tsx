@@ -8,6 +8,7 @@ import React, {
   SVGProps,
 } from "react";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
 type IconAlias = ForwardRefExoticComponent<
   Omit<SVGProps<SVGSVGElement>, "ref"> & {
@@ -28,15 +29,25 @@ type CardIconType = {
 const CardIcon: FC<CardIconType> = (props) => {
   const cardIconHeaderStyleClasses = clsx(
     "card_icon_header flex justify-between items-center gap-2 px-8 py-12 container mx-auto bg-gray-100",
-    "col-start-1 col-end-2 row-start-1 row-end-2",
+    "col-start-1 col-end-2 row-start-1 row-end-2"
   );
   const cardIconContentStyleClasses = clsx(
     "card_icon_content flex flex-col gap-2 px-8 py-8 container mx-auto",
-    "col-start-1 col-end-2 row-start-2 row-end-3",
+    "col-start-1 col-end-2 row-start-2 row-end-3"
   );
 
   return (
     <article className={"card_icon grid " + props.className}>
+      {props.picture || props.picture === undefined && (
+        <figure className="col-start-1 col-end-2 row-start-0 row-end-1 py-4 flex justify-center">
+          <Image
+            src="/img_placeholder.svg"
+            alt="img_placeholder"
+            width={120}
+            height={120}
+          />
+        </figure>
+      )}
       <div className={cardIconHeaderStyleClasses}>
         {props.title && <h2 className="text-xl max-w-[20ch]">{props.title}</h2>}
         {props.icon && <props.icon className="w-12" />}
