@@ -54,7 +54,7 @@ const Header = () => {
 
   return (
     <header
-      className="header text-sm leading-snug p-4 fixed top-0 left-0 w-full h-auto"
+      className="header text-sm leading-snug p-4 fixed top-0 left-0 w-full h-auto z-10"
       onMouseEnter={headerEnterHandler}
       onMouseLeave={headerLeaveHandler}
     >
