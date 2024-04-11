@@ -11,6 +11,7 @@ import React from "react";
 
 const Home = () => {
   return (
+    // TODO refactor the wrapper
     <div className="flex flex-col gap-16 mb-20">
       <CardContainer adaptativity="fluid" screenHeight={93}>
         <Card
