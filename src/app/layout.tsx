@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/global/Header";
 import Footer from "@/components/global/Footer";
+import { motion } from "framer-motion";
+import LayoutTransition from "@/components/transitions/LayoutTransition";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +21,10 @@ export default function RootLayout({
       <body className={"winduu"}>
         <div className="winduu_front min-h-screen flex flex-col">
           <Header />
-          <div className="wrapper block flex-1 mt-16">{children}</div>
+
+          <LayoutTransition>
+            <div className="wrapper block flex-1 mt-16">{children}</div>
+          </LayoutTransition>
           <Footer />
         </div>
       </body>

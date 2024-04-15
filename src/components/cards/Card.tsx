@@ -15,7 +15,7 @@ type IconAlias = ForwardRefExoticComponent<
     titleId?: string | undefined;
   } & RefAttributes<SVGSVGElement>
 >;
-type ButtonVariantProps =
+export type ButtonVariantProps =
   | "link"
   | "ghost"
   | "default"
