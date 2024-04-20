@@ -75,7 +75,7 @@ const BlogSinglePage = ({ params }: { params: { post_slug: string } }) => {
         </div>
       </CardContainer>
       <CardContainer adaptativity="framed">
-        <Card picture="" className="h-96"></Card>
+        <Card picture="none" className="h-96"></Card>
       </CardContainer>
       <CardContainer
         adaptativity="dynamic"

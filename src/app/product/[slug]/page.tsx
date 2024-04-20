@@ -21,10 +21,10 @@ import { Input } from "@/components/ui/input";
 const ProductsSinglePage = ({ params }: { params: { slug: string } }) => {
   return (
     <div className="product_name">
-      <section className="my-12">
-        <CardContainer adaptativity="dynamic" cols={3} className="gap-12">
-          <div className="picture_big col-start-1 col-span-2 relative text-sm">
-            <div className="picture_big_content w-full aspect-square max-h-[70vh] bg-slate-100">
+      <section className="my-24">
+        <CardContainer adaptativity="dynamic" cols={3} className="gap-x-12">
+          <div className="picture_big col-start-1 col-span-2 text-sm">
+            <div className="picture_big_content w-full aspect-square max-h-[70vh] relative bg-slate-100 sticky top-24">
               <Image
                 src="/img_placeholder.svg"
                 alt="img_placeholder"
@@ -32,11 +32,11 @@ const ProductsSinglePage = ({ params }: { params: { slug: string } }) => {
                 height={10}
                 className="w-full h-full object-none"
               />
-            </div>
-            <div className="picture_big_menu flex gap-2 absolute bottom-4 left-4">
-              <Button>Configuración</Button>
-              <Button variant="outline">Exterior</Button>
-              <Button variant="outline">Interior</Button>
+              <div className="picture_big_menu flex gap-2 absolute bottom-4 left-4">
+                <Button>Configuración</Button>
+                <Button variant="outline">Exterior</Button>
+                <Button variant="outline">Interior</Button>
+              </div>
             </div>
           </div>
           <div className="col-start-3 col-span-1">
@@ -186,7 +186,7 @@ const ProductsSinglePage = ({ params }: { params: { slug: string } }) => {
             </section>
 
             <Separator className="my-4" />
-            <section className="mb-8">
+            <section className="">
               <h3 className="mb-3">Envía la configuración a tu correo</h3>
               <div className="flex gap-2">
                 <Input placeholder="Correo" />

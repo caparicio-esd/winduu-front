@@ -6,14 +6,15 @@ import dynamic from "next/dynamic";
 import { useMemo } from "react";
 
 const ShopsPage = () => {
-  const MapWithNoSSR = useMemo(() => dynamic(
-    () => import('@/components/map/map'),
-    { 
-      loading: () => <p>A map is loading</p>,
-      ssr: false
-    }
-  ), [])
-  
+  const MapWithNoSSR = useMemo(
+    () =>
+      dynamic(() => import("@/components/map/map"), {
+        loading: () => <p>A map is loading</p>,
+        ssr: false,
+      }),
+    [],
+  );
+
   return (
     <div className="flex flex-col gap-16 mb-20">
       <CardContainer adaptativity="fluid" screenHeight={93}>

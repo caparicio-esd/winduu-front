@@ -62,28 +62,68 @@ const UsPage = () => {
         </SectionHeading>
         <div className="inline-grid grid-cols-4 w-6/12 mx-auto my-8 gap-4">
           <div className="flex justify-center p-4 border">
-            <Image src="/img_placeholder_mini.svg" alt="bla" width={50} height={50} />
+            <Image
+              src="/img_placeholder_mini.svg"
+              alt="bla"
+              width={50}
+              height={50}
+            />
           </div>
           <div className="flex justify-center p-4 border">
-            <Image src="/img_placeholder_mini.svg" alt="bla" width={50} height={50} />
+            <Image
+              src="/img_placeholder_mini.svg"
+              alt="bla"
+              width={50}
+              height={50}
+            />
           </div>
           <div className="flex justify-center p-4 border">
-            <Image src="/img_placeholder_mini.svg" alt="bla" width={50} height={50} />
+            <Image
+              src="/img_placeholder_mini.svg"
+              alt="bla"
+              width={50}
+              height={50}
+            />
           </div>
           <div className="flex justify-center p-4 border">
-            <Image src="/img_placeholder_mini.svg" alt="bla" width={50} height={50} />
+            <Image
+              src="/img_placeholder_mini.svg"
+              alt="bla"
+              width={50}
+              height={50}
+            />
           </div>
           <div className="flex justify-center p-4 border">
-            <Image src="/img_placeholder_mini.svg" alt="bla" width={50} height={50} />
+            <Image
+              src="/img_placeholder_mini.svg"
+              alt="bla"
+              width={50}
+              height={50}
+            />
           </div>
           <div className="flex justify-center p-4 border">
-            <Image src="/img_placeholder_mini.svg" alt="bla" width={50} height={50} />
+            <Image
+              src="/img_placeholder_mini.svg"
+              alt="bla"
+              width={50}
+              height={50}
+            />
           </div>
           <div className="flex justify-center p-4 border">
-            <Image src="/img_placeholder_mini.svg" alt="bla" width={50} height={50} />
+            <Image
+              src="/img_placeholder_mini.svg"
+              alt="bla"
+              width={50}
+              height={50}
+            />
           </div>
           <div className="flex justify-center p-4 border">
-            <Image src="/img_placeholder_mini.svg" alt="bla" width={50} height={50} />
+            <Image
+              src="/img_placeholder_mini.svg"
+              alt="bla"
+              width={50}
+              height={50}
+            />
           </div>
         </div>
       </CardContainer>
@@ -92,9 +132,24 @@ const UsPage = () => {
         <SectionHeading>
           <h2 className="text-3xl max-w-[20ch]">Innovación</h2>
         </SectionHeading>
-        <Card pretitle="fecha" title="Titular noticia" picture="none" className="min-h-96" />
-        <Card pretitle="fecha" title="Titular noticia" picture="none" className="min-h-96" />
-        <Card pretitle="fecha" title="Titular noticia" picture="none" className="min-h-96" />
+        <Card
+          pretitle="fecha"
+          title="Titular noticia"
+          picture="none"
+          className="min-h-96"
+        />
+        <Card
+          pretitle="fecha"
+          title="Titular noticia"
+          picture="none"
+          className="min-h-96"
+        />
+        <Card
+          pretitle="fecha"
+          title="Titular noticia"
+          picture="none"
+          className="min-h-96"
+        />
       </CardContainer>
     </div>
   );

@@ -83,7 +83,9 @@ const Card: FC<CardType> = (props) => {
       </picture>
       <div className={cardContentStyleClasses}>
         {props.preIcon && <props.preIcon className="w-6" />}
-        {props.pretitle && <p className="uppercase text-xs">{props.pretitle}</p>}
+        {props.pretitle && (
+          <p className="uppercase text-xs">{props.pretitle}</p>
+        )}
         {props.title && <h2 className="text-xl max-w-[20ch]">{props.title}</h2>}
         {props.text && <p className="max-w-[35ch] mb-2">{props.text}</p>}
         {props.buttons && props.buttons?.length > 0 && (

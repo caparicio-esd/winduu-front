@@ -23,7 +23,7 @@ export default function RootLayout({
           <Header />
 
           <LayoutTransition>
-            <div className="wrapper block flex-1 mt-16">{children}</div>
+            <div className="wrapper block flex-1">{children}</div>
           </LayoutTransition>
           <Footer />
         </div>
