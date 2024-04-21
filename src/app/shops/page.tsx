@@ -1,11 +1,14 @@
+"use client"
+
 import Card from "@/components/cards/Card";
 import CardContainer from "@/components/cards/CardContainer";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import dynamic from "next/dynamic";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 
 const ShopsPage = () => {
+  const [currentLocation, setCurrentLocation] = useState<{lat: number, lng: number} | null>(null)
   const MapWithNoSSR = useMemo(
     () =>
       dynamic(() => import("@/components/map/map"), {
@@ -14,6 +17,23 @@ const ShopsPage = () => {
       }),
     [],
   );
+
+  const locationPromise = new Promise<{lat: number, lng: number}>((res, rej) => {
+    try {
+      navigator.geolocation.getCurrentPosition((position) => {
+        const lat = position.coords.latitude
+        const lng = position.coords.longitude
+        res({lat, lng})
+      })
+    } catch {
+      rej("Not able to get coords")
+    }
+  })
+
+  const locationService = async () => {
+    const location = await locationPromise.then(c => c)
+    setCurrentLocation(location)
+  }
 
   return (
     <div className="flex flex-col gap-16 mb-20">
@@ -33,11 +53,13 @@ const ShopsPage = () => {
             <Input />
           </div>
           <p>
-            <Button variant="link" className="px-0">
+            <Button variant="link" className="px-0 text-xs" onClick={locationService}>
               UTILIZAR MI UBICACIÓN
             </Button>
           </p>
+          <p>{JSON.stringify(currentLocation)}</p>
         </div>
+        
         <MapWithNoSSR />
       </CardContainer>
     </div>
